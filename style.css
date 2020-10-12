@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #224941 url("./img/ragnar-vorel-dTORmw497sM-unsplash.jpg")
+    no-repeat center center/cover;
+  color: rgb(58, 58, 58);
+  font-family: "Handlee", cursive;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  opacity: 60%;
+}
+
+.top {
+  margin: 2em;
+}
+
+h1 {
+  margin-left: 1.8em;
+  font-family: "Homemade Apple", cursive;
+  color: #384e63;
+}
+
+audio {
+  width: 320px;
+  border-radius: 50px;
+  margin: 0 auto;
+  opacity: 40%;
+  border: none;
+}
+
+.song {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7em;
+}
+
+.innerText {
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  position: relative;
+  transform: scale(1);
+}
+
+.circle {
+  background-color: #bdbdbd;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.gradient-circle {
+  background: conic-gradient(
+    #7c9dbb 0%,
+    #5e82a1 40%,
+    #ddd 40%,
+    #ddd 60%,
+    #384e63 60%,
+    #7c9dbb 100%
+  );
+  height: 320px;
+  width: 320px;
+  z-index: -2;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.pointer {
+  background-color: #ddd;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: block;
+}
+
+.pointer-container {
+  position: absolute;
+  top: -40px;
+  left: 140px;
+  width: 20px;
+  height: 190px;
+  animation: rotate 7.5s linear forwards infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container.grow {
+  animation: grow 3s linear forwards;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.container.shrink {
+  animation: shrink 3s linear forwards;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
